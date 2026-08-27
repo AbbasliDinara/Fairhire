@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('/static/55.jpeg'); /* Arka plan resmi */
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* Three equal columns */
+            gap: 10px;
+            /* Spacing between columns */
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .textarea {
+            border-radius: 10px;
+        }
+
+        .submit_button {
+            padding: 10px;
+            background-color: darkslategray;
+            color: azure;
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        .pause_button {
+            padding: 10px;
+            background-color: lightcoral;
+            color: black;
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        .resume_button {
+            padding: 10px;
+            background-color: lightgreen;
+            color: black;
+            border-radius: 15px;
+            margin-left: 10px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <br>
+    <h1 style="text-align: center; color: aliceblue;">FAİRHİRE</h1>
+    <div class="container">
+        <div class="box">
+            <h1>Analyze for Job Role</h1>
+            <!-- <form method="post" enctype="multipart/form-data"> -->
+                <input type="hidden" name="analysis_type" value="first">
+                <br>
+                <ul>
+                    <li>You can select a single resume and analyze it for a Job Role</li>
+                </ul>
+                
+                <br>
+                <br>
+                <a href="/job_role"><button class="submit_button">Analyze</button></a>
+            <!-- </form> -->
+        </div>
+
+        <div class="box">
+            <h1>Analyze for Job Description</h1>
+            <!-- <form method="post" enctype="multipart/form-data"> -->
+                <input type="hidden" name="analysis_type" value="second">
+                <ul>
+                    <li>You can select a single resume and analyze it for a detailed Job Description with Priority as Experience, Education, Skills etc.</li>
+                </ul>
+                <br>
+                
+                <br>
+                <br>
+                <a href="/job_desc"><button class="submit_button" type="submit">Analyze</button></a>
+            <!-- </form> -->
+        </div>
+
+        <div class="box">
+            <h1>Select Best Candidates</h1>
+                    <!-- <form method="post" enctype="multipart/form-data"> -->
+                <input type="hidden" name="analysis_type" value="third">
+                <br>
+                <ul>
+                    <li>You can select multiple Resumes/CV and AI will choose the Best candidates as per provided Job Desciption</li>
+                </ul>
+                <br>
+                
+                <br>
+                <br>
+                <a href="/select_best"><button class="submit_button" type="submit">Select Best Ones</button></a>
+                        <!-- </form> -->
+            
+            <br>
+            <br>
+        </div>
+
+
+    </div>
+
+    <br>
+</body>
+
+</html>

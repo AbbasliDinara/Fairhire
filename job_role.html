@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('/static/99.jpg'); /* Arka plan resmi */
+           /* Resmin tamamının görünmesini sağlar */
+           background-size: 1550px 700px ;
+           
+            background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Three equal columns */
+            /* gap: 10px; */
+            /* Spacing between columns */
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .textarea {
+            border-radius: 10px;
+        }
+
+        .submit_button {
+            padding: 10px;
+            background-color: darkslategray;
+            color: azure;
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        .pause_button {
+            padding: 10px;
+            background-color: lightcoral;
+            color: black;
+            border-radius: 15px;
+            font-size: large;
+        }
+
+        .resume_button {
+            padding: 10px;
+            background-color: lightgreen;
+            color: black;
+            border-radius: 15px;
+            margin-left: 10px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1 style="text-align: center; color: #000000;">Resume Analyzer Application</h1>
+    <div class="container">
+        <div class="box">
+            <h1  style="text-align: center; color: #795458;"> Analyze for Job Role</h1>
+            <form action="/analyze_for_job_role" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="analysis_type" value="first">
+                <br>
+                <ul>
+                    <li>You can select a single resume and analyze it for a Job Role</li>
+                </ul>
+                <label>Select a Resume (pdf):</label>
+                <input type="file" name="resume_file" required>
+                <br>
+                <br>
+                <label>Enter Job Role:</label>
+                <input type="text" name="job_role" required>
+                <br>
+                <br>
+                <button class="submit_button" type="submit">Analyze</button>
+            </form>
+        </div>
+
+        
+
+        
+    
+    
+    </div>
+
+    <br>
+</body>
+
+</html>
